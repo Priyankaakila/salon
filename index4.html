@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&family=Protest+Revolution&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+
+    <style>
+        body{
+            font-family: 'DM Sans', sans-serif;
+            margin: 0;
+        }
+        .contact{
+        display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 50px;
+        }
+        .contact>img{
+            position: relative;
+        }
+        .logo{
+            font-size: 15px;
+            font-weight: 600;
+            font-family: 'Protest Revolution', sans-serif;
+            color: #3d3e3e;
+            position: absolute;
+            top: 238.5px;
+            left: 665px;
+        }
+        .add{
+            display: flex;
+            flex-wrap: wrap;
+            color: #52585c;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 80px;
+            font-family: 'Dancing Script', cursive;
+        }
+        hr{
+            margin-top: 40px;
+            width: 100px;
+            height: 2px;
+            background-color: #52585c;
+            margin-bottom: -40px;
+        }
+        .phyadd{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 80px;
+        }
+        .phyadd>h2{
+            margin-top: -10px;
+        }
+        .time{
+            margin-top: 80px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 2;
+        }
+        .map{
+            text-align: center;
+        }
+        .contact-form{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+            font-family: 'Dancing Script', cursive;
+        }
+        form{
+            margin-top: 30px;
+            border: 1px solid #40474c;
+            width: 500px;
+            padding: 30px;
+            backdrop-filter: blur(2px);
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        form> h1>a{
+            color: #52585c;
+            font-size: 40px;
+            text-align: center;
+        }
+        form>h1,p{
+            text-align: center;
+            color: #52585c;
+        }
+        form>input{
+            width: 95%;
+            border: 1px solid #40474c;
+            outline: none;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #52585c;
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        ::placeholder{
+            color: rgb(179, 175, 175);
+        }
+        textarea{
+            width: 95%;
+            margin-bottom: 30px;
+            background-color: #52585c;
+            color: white;
+            font-size: 16px;
+            font-family: 'DM Sans', sans-serif;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .btn{
+            margin-bottom: 30px;
+        }
+        .book{
+            padding: 10px 16px;
+            border-radius: 10px;
+            font-size: 16px;
+            border: 1px solid #40474c;
+            background-color: #52585c;
+            color:rgb(179, 175, 175);
+            cursor: pointer;
+        }
+        .cancel{
+            padding: 10px 16px;
+            border-radius: 10px;
+            font-size: 16px;
+            float: right;
+            border: 1px solid #40474c;
+            background-color: #52585c;
+            color: rgb(179, 175, 175);
+            cursor: pointer;
+        }
+        .i1{
+            margin-top: 50px;
+        }
+        footer{
+            background-color: #52585c;
+            color: white;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+        }
+        footer> h1>a{
+            color: white;
+            text-decoration: none;
+            font-size: 50px;
+            font-family: 'Dancing Script', cursive;
+        }
+        .call{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            gap: 150px;
+            margin-top: 30px;
+        }
+        .mob>a,.email>a{
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .nav{
+            margin-top: 80px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 100px;
+        }
+        .nav>a{
+            color: white;
+            text-decoration: none;
+        }
+        .nav2{
+            margin-top: 50px;
+            margin-bottom: 50px;
+            font-size: 22px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            cursor: pointer;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="contact">
+        <img src="https://media.istockphoto.com/id/481927209/vector/architecture.jpg?s=612x612&w=0&k=20&c=UxllqrjKTxYST7UnB9Q6SyjY7w7sfuNSEC6UjXV4t90=" alt="" >
+        <h3 class="logo">Saspa</h3>
+    </div>
+
+    <div class="add">
+
+        <div class="phyadd">
+            <h1> Saspa Salon Washington</h1>
+            <h2>1134 W. Washington Blvd. Chicago, IL 60607</h2>
+            <hr>
+            <hr>
+            <div class="time">
+                <p>Monday | 11:00 AM - 9:00PM </p>
+                <p>Tuesday - Thursday | 9:00 AM - 9:00PM </p>
+                <p>Friday    | 9:00 AM - 5:00PM </p>
+                <p>Saturday | 11:00 AM - 5:00PM </p>
+                <p>Sunday | 11:00 AM - 2:00PM </p>
+            </div>
+        </div>
+
+        <div class="map">
+            <h2> Map Us</h2>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11898.898943496111!2d-87.63690515971685!3d41.791145606264095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2934a16e3a6d%3A0xe812ef1aa02b295c!2sWashington%20Park%2C%20Chicago%2C%20IL%2C%20USA!5e0!3m2!1sen!2sin!4v1707233727879!5m2!1sen!2sin" width="600" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" name="box"></iframe>
+
+        </div>
+    </div>
+
+    <section>
+        <div class="contact-form">
+            <h1>Contact Us</h1>
+
+            <form action="">
+                <h1>
+                    <a href="http://127.0.0.1:5500/salon/index.html">Saspa Salon</a></h1> 
+                <p>Thank you for choosing us , we look forward to assist you.</p>
+                <p>Book your appointment online by filling your details.</p>
+                
+                
+                    <input class="i1" type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" >
+                    <input type="email" placeholder="Email" >
+                    <input type="text" placeholder="Assistance You Need" required>
+                    <input type="text" placeholder="Stylist You Need" >
+                    <textarea name="" id="" cols="52" rows="5" placeholder="Suggestions:"></textarea>
+            <div class="btn">
+                
+                <button class="book">Book Now</button>
+                <button class="cancel">Cancel Booking</button>
+            </div>
+                
+            
+                <p>We appreciate 24 hours notice if you need to cancel your appointment.</p>
+            </form>
+        </div>
+    </section>
+    
+    <footer>
+        <h1>
+            <a href="http://127.0.0.1:5500/salon/index.html">Saspa <i class="fa-solid fa-scissors"  style="margin-top: 10px; font-size: 30px;"></i> Salon</a>
+        </h1>
+        <div class="call">
+           <div class="mob">
+            <h2> CALL US / TEXT US</h2>
+            <a href="">(312) 491-9771</a>
+           </div>
+           <div class="email">
+            <h2>
+                EMAIL US
+            </h2>
+            <a href="">frontdesk@saspa-salon.com</a>
+           </div>
+        </div>
+
+
+        <div class="nav">
+            <a href="http://127.0.0.1:5500/salon/index.html">HOME</a>
+            <a href="http://127.0.0.1:5500/salon/index2.html">SERVICES</a>
+            <a href="http://127.0.0.1:5500/salon/index3.html">TEAM</a>
+            <a href="http://127.0.0.1:5500/salon/index4.html">CONTACT</a>
+        </div>
+
+        <div class="nav2">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-tiktok"></i>
+        </div>
+    </footer>
+</body>
+
+</html>

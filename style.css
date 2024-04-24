@@ -1,0 +1,85 @@
+body{
+    font-family: 'Dancing Script', cursive;
+}
+header{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 330px;
+    height: 100%;
+    background-color:#52585c;
+    background-clip: border-box;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* z-index: 1; */
+}
+header h1{
+    color: white;
+}
+.nav{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    /* font-weight: 600; */
+    margin-bottom: 30px;
+}
+#home{
+position: relative;
+ background-image:linear-gradient(rgba(53, 53, 53, 0.6), rgba(53, 53, 53, 0.6)), url("https://en.idei.club/uploads/posts/2023-03/1679020438_en-idei-club-p-luxury-hair-salon-intere-instagram-11.jpg");/* linear-gradient(rgba(185, 180, 177, 0.6), rgba(185, 180, 177, 0.6)), */
+background-position: 0 0, 50% 0;
+background-repeat: repeat, no-repeat;
+background-size: auto, cover;
+background-attachment: scroll, fixed;
+box-sizing: border-box;
+margin: -8px -8px 0px -0px;
+width: 79.3%;
+height: 100vh;
+float: right;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+/* filter: brightness(.9); */
+}
+.head{
+    font-size: 40px;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    /* position: absolute; */
+}
+.head > h1{
+margin-bottom: -50px;
+}
+.head > h3{
+    margin-top: -50px;
+    font-weight: normal;
+}
+.booking a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border: 1px solid white;
+    background-color:#52585c ;
+    border-radius: 10px;
+    padding: 15px;
+}
+.booking a:hover{
+    background-color: white;
+    color: #52585c;
+}

@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            font-family: 'DM Sans', sans-serif;
+        }
+        header{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            color: #52585c;
+            margin: 0px 30px;
+            gap: 500px; 
+        }  
+        header h1{
+            font-size: 30px;
+            /* color: white; */
+        }
+        p{
+            font-size: 25px;
+        }
+        a{
+            color: #52585c;
+        }
+        .bars>i{
+            color: #52585c ;
+            font-size: 30px;
+        }
+        .bars{
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            margin-left: 70px;
+        }
+        .content{
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            margin-left: -90px;
+        }
+        .content a{
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            background-color: whitesmoke;
+        }
+        .content a:hover{
+            background-color:#52585c ;
+            color:white;
+        }
+        .bars:hover .content{
+            display: block;
+        }
+        .serv{
+            background-color: #52585c;
+            width: 100%;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .service{
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            width: 90%;
+        }
+        #haircut{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            
+        }
+        #haircut h1{
+            font-size: 40px;
+            margin-bottom: -15px;
+        }
+        .i1>img{
+            border-radius: 50%;
+            border: 5px double white;
+        }
+        .i1>p{
+            font-size: 20px;
+
+        }
+        .price{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 30px;
+        }
+        #hair{
+            margin-top: 100px;
+            width: 100%;
+            display: grid;
+            
+        }
+        #hair>h2{
+            margin-top: 40px;
+        }
+        .barb{
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: auto auto ;
+            justify-content: space-around;
+            align-items: center;
+            gap: 50px;
+        }
+        table,th,tr,td{
+            text-align: left;
+            border-spacing: 40px 10px;
+            font-size: 18px;
+            font-weight: normal;
+            margin-left: 30px;
+        }
+        .i2{
+            width:400px;
+            height: 500px;
+            transition: transform .2s;
+        }
+        .i2>img{
+            border-radius: 50%;
+            border: 5px double white;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            cursor: pointer;
+        }
+        .i2>img:hover{
+            -ms-transform: scale(1.5); 
+            -webkit-transform: scale(1.5); 
+            transform: scale(1.5); 
+        }
+
+        #beauty{
+            margin-top: 100px;
+            width: 100%;
+            display: grid;
+            text-align: center;
+        }
+        .skin{
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: auto auto ;
+            justify-content: space-around;
+            align-items: center;
+            gap: 50px;
+        }
+        .i3{
+            width:350px;
+            height: 500px;
+            transition: transform .2s;
+            
+            margin-top: 50px;
+        }
+        .i3>img{
+            border-radius: 50%;
+            border: 5px double white;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            cursor: pointer;
+        }
+        .i3>img:hover{
+            -ms-transform: scale(1.5); 
+            -webkit-transform: scale(1.5); 
+            transform: scale(1.5); 
+        }
+        .i3>p{
+            font-size: 18px;
+            text-align: justify;
+            line-height: 1.5;
+            margin-left: 30px;
+        }
+    .btn{
+        padding: 15px 20px;
+        border-radius: 50px;
+        border: 2px solid white;
+        margin: 20px 0px;
+        font-size: 16px;
+        background-color: #5e6468;
+        color: white;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .btn:hover{
+        background-color: white;
+        color: #52585c;
+    }
+    .navigate{
+        display: flex;
+        /* flex-wrap: wrap; */
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 50px;
+        width: 100%;
+    }
+    .back{
+        text-decoration: none;
+        font-weight: 600;
+        border: 3px solid #4e4c4c;
+        padding: 10px 15px;
+        border-radius: 50px;
+        background-color: #52585c;
+        color: white;
+    }
+    .back:hover{
+        background-color: #fff;
+        color: #52585c;
+    }
+
+    .next{
+        text-decoration: none;
+        font-weight: 600;
+        border: 3px solid #4e4c4c;
+        padding: 10px 15px;
+        border-radius: 50px;
+        background-color: #52585c;
+        color: white;
+        float: right;
+    }
+    .next:hover{
+        background-color: #fff;
+        color: #52585c;
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="http://127.0.0.1:5500/salon/index.html">Saspa <i class="fa-solid fa-scissors"  style="margin-top: 10px; font-size: 25px;"></i> Salon</a>
+        </h1>
+        <h1>Services</h1>
+        <div class="bars">
+            <i class="fa-solid fa-bars"></i>
+            <div class="content">
+                <a href="#haircut">Haircuts</a>
+                <a href="#hair">Hair Services</a>
+                <a href="#beauty">Beauty Services</a>
+            </div>
+        </div>
+    </header>
+    <div class="serv">
+        <div class="service">
+            <div id="haircut">
+                <h1>Haircuts</h1>
+                <p>All Cuts include a wash, scalp massage, and style.</p>
+                <div class="price">
+                <div class="i1">
+                    <img src="https://imgmedia.lbb.in/media/2021/04/60653aad3926a857206aee80_1617246893771.jpg" alt="" width="150px" height="150px">
+                    <p>Kids</p>
+                    <p>₹300+</p>
+                </div>
+                <div class="i1">
+                    <img src="https://cdntrust.s3.us-east-2.amazonaws.com/images/b8b7e5e9-6913-488d-8f3c-4133aa1d79b4.jpg" alt="" width="150px" height="150px">
+                    <p>Women</p>
+                    <p>₹700+</p>
+                </div>
+                <div class="i1">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipM2FBGoeVyFl4MY8neGH3DbGe4CCM7XrRI_-K67=w1080-h608-p-no-v0" alt="" width="150px" height="150px">
+                    <p>Men</p>
+                    <p>₹700+</p>
+                </div>
+            </div>
+
+            <div id="hair">
+                <h1>Hair Services</h1>
+                <h2>Life is too short to have boring hair.</h2>
+                <div class="barb">
+                    
+                    <div class="i2">
+                        <h1>Barbering</h1>
+                        <img src="https://www.zhairacademy.com/wp-content/uploads/fly-images/1921/Z-Hair-Academy-Mens-Cuts-Intro-640x600-c.jpg   " alt="" width="100px" height="100px">
+                        <table>
+                            <tr>
+                                <th>Straight Razor Shave</th>
+                                <td>₹500+</td>
+                            </tr>
+                            <tr>
+                                <th>Cut & Groom</th>
+                                <td>₹600+</td>
+                            </tr>
+                            <tr>
+                                <th>Clipper Cut</th>
+                                <td>₹500+</td>
+                            </tr>
+                            <tr>
+                                <th>Neck Clean Up</th>
+                                <td>₹150+</td>
+                            </tr>
+                            <tr>
+                                <th>Beard Clean Up</th>
+                                <td>₹170+</td>
+                            </tr>
+                            <tr>
+                                <th>Beard Detailing</th>
+                                <td>₹350+</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="i2">
+                        <h1>Hair Services</h1>
+                        <img src="https://imgmedia.lbb.in/media/2023/10/651e934679450a739e538d62_1696502598305.jpg" alt="" width="100px" height="100px">
+                        <table>
+                            <tr>
+                                <th> Cut & Style</th>
+                                <td>₹700+</td>
+                            </tr>
+                            <tr>
+                                <th>Bang Trim</th>
+                                <td>₹300+</td>
+                            </tr>
+                            <tr>
+                                <th>Blow Dry</th>
+                                <td>₹500+</td>
+                            </tr>
+                            <tr>
+                                <th>Curl Set / Upstyle</th>
+                                <td>₹1190+</td>
+                            </tr>
+                            <tr>
+                                <th>Express Style</th>
+                                <td>₹990+</td>
+                            </tr>
+                            <tr>
+                                <th>Hair Extensions / Tape, Tab & Sew-In, K-Tip & I-Tip Braids</th>
+                                <td>₹1990+</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div class="i2">
+                        <h1>Color Services</h1>
+                        <img src="https://sinimangatt.com/cdn/shop/articles/Ombre_Blog_Sinima_Salon_1600x.png?v=1600758903" alt="" width="100px" height="100px">
+                        <table>
+                            <tr>
+                                <th>Single Process Color</th>
+                                <td>₹1990+</td>
+                            </tr>
+                            <tr>
+                                <th>Lightening / Foliage / Balayage  </th>
+                                <td>₹2300+</td>
+                            </tr>
+                            <tr>
+                                <th>SPC & Partial</th>
+                                <td>₹2800+</td>
+                            </tr>
+                            <tr>
+                                <th>Dimensional Color</th>
+                                <td>₹1250+</td>
+                            </tr>
+                            <tr>
+                                <th>Corrective Color </th>
+                                <td>₹970+</td>
+                            </tr>
+                            <tr>
+                                <th>Color Enhance</th>
+                                <td>₹650+</td>
+                            </tr>
+                            <tr>
+                                <th>Shadow Root Enhance </th>
+                                <td>₹950+</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="i2">
+                        <h1>Treatments</h1>
+                        <img src="https://media.istockphoto.com/id/692814140/photo/young-attractive-brunette-with-voluminous-shiny-and-curly-hairstyle.jpg?s=612x612&w=0&k=20&c=bBwh2U0AtUCxlWIY67rKZBp3BldMPPrwfxIIFUlJeYM= " alt="" width="100px" height="100px">
+                        <table>
+                            <tr>
+                                <th>Kerastase Treatment</th>
+                                <td>₹500+</td>
+                            </tr>
+                            <tr>
+                                <th>K18 Mask</th>
+                                <td>₹500+</td>
+                            </tr>
+                            <tr>
+                                <th>Bond Builder Mask</th>
+                                <td>₹550+</td>
+                            </tr>
+                            <tr>
+                                <th>Keratin Complex Treatment </th>
+                                <td>₹3150+</td>
+                            </tr>
+                            <tr>
+                                <th>Perm</th>
+                                <td>₹1800+</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div id="beauty">
+            <h1>Beauty Services</h1>
+                <h2>Fall in Love with Your Reflection.</h2>
+                <div class="skin">
+                    <div class="i3">
+                        <h1>Skin Care</h1>
+                        <img src="https://d146hunxuupfmg.cloudfront.net/blog_images/jpeg-optimizer_cosmetologist-doing-face-treatment-applying-face-mask.jpg" alt="" width="100px" height="100px">
+                        <table>
+                            <tr>
+                                <th>Express Facial </th>
+                                <td>₹500+</td>
+                            </tr>
+                            <tr>
+                                <th>60 Minute Facial </th>
+                                <td>₹1500+</td>
+                            </tr>
+                            <tr>
+                                <th>90 Minute Facial  </th>
+                                <td>₹3000+</td>
+                            </tr>
+                            <tr>
+                                <th>Tan Removal </th>
+                                <td>₹800+</td>
+                            </tr>
+                            <tr>
+                                <th>Exfoliation </th>
+                                <td>₹800+</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="i3">
+                        <h1>Face Services</h1>
+                        <img src="https://lirp.cdn-website.com/0cb166f1/dms3rep/multi/opt/Jax-Glam+Home+Beauty+Salon+in+Bristol+UK+Bs4+offering+HD+Brows+Brow+Treatment-640w.jpg" alt="" width="100px" height="100px">
+                        <table>
+                            <tr>
+                                <th>Brow Shaping </th>
+                                <td>₹60+</td>
+                            </tr>
+                            <tr>
+                                <th>Brow Tinting </th>
+                                <td>₹80+</td>
+                            </tr>
+                            <tr>
+                                <th>Lash Tinting</th>
+                                <td>₹120+</td>
+                            </tr>
+                            <tr>
+                                <th>Lash Extensions  </th>
+                                <td>₹1200+</td>
+                            </tr>
+                            <tr>
+                                <th>Mascara Lash Package  </th>
+                                <td>₹1200+</td>
+                            </tr>
+                            <tr>
+                                <th>Natural Lash Package</th>
+                                <td>₹900+</td>
+                            </tr>
+                            <tr>
+                                <th>Full-Face Makeup</th>
+                                <td>₹1500+</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="i3">
+                        <h1>Spray Tanning</h1>
+                        <img src="https://bronzeboss.co/wp-content/uploads/sites/14100/2020/08/117693712_160554442290296_3412516700704176539_n.jpg" alt="" width="100px" height="100px">
+                        <table>
+                            <tr>
+                                <th>Full Body </th>
+                                <td>₹800+</td>
+                            </tr>
+                            <tr>
+                                <th>Lower Body</th>
+                                <td>₹600+</td>
+                            </tr>
+                        </table>
+
+                        <p>Custom, dry-quick formulation leaves no sticky residue or mess. The Glo Up solution is infused with pure grade DHA in combination with an anti-aging complex consisting of FDA-certified ingredients. </p>
+                    </div>
+
+                    <div class="i3">
+                        <h1>Waxing Services</h1>
+                        <img src="https://d146hunxuupfmg.cloudfront.net/blog_images/jpeg-optimizer_cosmetologist-doing-face-treatment-applying-face-mask.jpg" alt="" width="100px" height="100px">
+                        <table>
+                            <tr>
+                                <th>Brow, Lip & Chin  </th>
+                                <td>₹750+</td>
+                            </tr>
+                            <tr>
+                                <th>Under Arm </th>
+                                <td>₹500+</td>
+                            </tr>
+                            <tr>
+                                <th>Forearm  </th>
+                                <td>₹700+</td>
+                            </tr>
+                            <tr>
+                                <th>Full Arm </th>
+                                <td>₹800+</td>
+                            </tr>
+                            <tr>
+                                <th>Full Leg </th>
+                                <td>₹1000+</td>
+                            </tr>
+                            <tr>
+                                <th>Chest or Abdomen  </th>
+                                <td>₹800+</td>
+                            </tr>
+                            <tr>
+                                <th>Back  </th>
+                                <td>₹850+</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+        </div>
+
+        <a href="http://127.0.0.1:5500/salon/index1.html" class="btn">Book Now</a>
+    </div>
+
+    <div class="navigate">
+        <a class="back" href="http://127.0.0.1:5500/salon/index.html"><i class="fa-solid fa-backward"></i> Back</a>
+        <a class="next" href="http://127.0.0.1:5500/salon/index3.html">Next <i class="fa-solid fa-forward"></i></a>
+    </div>
+</body>
+</html>
